@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+            http://www.springframework.org/schema/security
+            http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+    <http auto-config="false" use-expressions="true" disable-url-rewriting="true">
+
+        <!--Khi cố tình vào trang quản trị khi chưa đăng nhập sẽ redirect về trang đăng nhập-->
+        <intercept-url pattern="/quan-tri/**" access="hasAnyRole('ADMIN')"/>
+        <!--<intercept-url pattern="/quan-tri/trang-chu" access="hasAnyRole('ADMIN')"/>-->
+        <!--<intercept-url pattern="/quan-tri/bai-viet/danh-sach" access="hasAnyRole('ADMIN')"/>-->
+
+        <!--Đăng nhập xong, truy cập vào các đường link không cho phép thì redirect về trang login và hiển thị thông báo accessDenied-->
+        <access-denied-handler error-page="/accessDenied"/>
+        <form-login login-page="/dang-nhap"
+                    username-parameter="j_username"
+                    password-parameter="j_password"
+                    login-processing-url="/j_spring_security_check"
+                    authentication-success-handler-ref="customSuccessHandler"
+                    authentication-failure-url="/dang-nhap?incorrectAccount"/>
+        <!--<session-management invalid-session-url="/dang-nhap?sessionTimeout"/>-->
+        <logout delete-cookies="JSESSIONID"/>
+    </http>
+
+    <!-- Xử lý username, password vs MD5 -->
+    <authentication-manager >
+        <authentication-provider user-service-ref="customUserDetailsService">
+            <password-encoder ref="bcryptEncoder"/>
+        </authentication-provider>
+    </authentication-manager>
+
+    <beans:bean id="bcryptEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+    <beans:bean id="customUserDetailsService" class="com.webgiasu.service.impl.CustomUserDetailsService" />
+    <beans:bean id="customSuccessHandler" class="com.webgiasu.security.CustomSuccessHandler"/>
+
+</beans:beans>

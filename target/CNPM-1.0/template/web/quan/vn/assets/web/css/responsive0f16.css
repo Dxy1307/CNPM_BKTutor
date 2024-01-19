@@ -1,0 +1,310 @@
+@media all and (min-width:1024px) {
+    .menu ul li:hover ul {
+        display: block !important;
+        visibility: inherit;
+        opacity: 1;
+        pointer-events: inherit;
+        top: 66px
+    }
+
+    #modal-merge-classroom-8 .modal-dialog {
+        max-width: 700px;
+        margin: 1.75rem auto
+    }
+}
+
+@media all and (min-width:320px) and (max-width:1024px) {
+    body {
+        font-size: 15px
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 20px
+    }
+
+    .header {
+        height: 67px
+    }
+
+    .toogle-a {
+        display: block
+    }
+
+    .toogle-a.active span:nth-child(2) {
+        display: none
+    }
+
+    .toogle-a.active span:nth-child(1) {
+        transform: rotate(-47deg);
+        top: 17px
+    }
+
+    .toogle-a.active span:nth-child(3) {
+        transform: rotate(41deg);
+        top: 17px
+    }
+
+    .menu {
+        position: fixed;
+        top: 67px;
+        right: -100%;
+        height: calc(100vh - 67px);
+        max-width: 70%;
+        background: #fff;
+        text-align: left;
+        width: 250px;
+        left: auto;
+        margin: 0 !important;
+        transition: all .3s ease-in-out;
+        z-index: 20;
+        overflow: auto;
+        border-left: 1px solid #ddd
+    }
+
+    .menu.show {
+        right: 0
+    }
+
+    .menu>ul>li {
+        display: block;
+        margin: 0;
+        float: none;
+        border-bottom: 1px solid #ddd
+    }
+
+    .menu>ul>li>a {
+        color: #000
+    }
+
+    .menu>ul>li>a>i {
+        float: right;
+        margin-top: 5px
+    }
+
+    .bg-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        z-index: 10;
+        background: rgba(0, 0, 0, .7)
+    }
+
+    .menu ul li ul {
+        position: relative;
+        box-shadow: none;
+        border-radius: 0;
+        background: #eee;
+        opacity: 1;
+        visibility: inherit;
+        top: 0;
+        display: none;
+        pointer-events: all
+    }
+
+    .bg-menu.active {
+        height: 100%
+    }
+
+    .right-header {
+        margin-right: 50px
+    }
+
+    .txt-banner {
+        font-size: 16px;
+        padding-top: 80px
+    }
+
+    .txt-banner h2 {
+        font-size: 30px
+    }
+
+    .title-main h2 {
+        font-size: 25px
+    }
+
+    .signup-main-box .btn {
+        position: relative;
+        top: 0;
+        margin: 10px 0 0 0;
+        right: 0
+    }
+
+    .title-main {
+        padding-right: 70px
+    }
+
+    .adm-main {
+        padding: 30px 0
+    }
+
+    .box-adm {
+        display: block
+    }
+
+    .left-adm {
+        width: 100%
+    }
+
+    .right-adm {
+        width: 100%;
+        border: 0
+    }
+
+    .menu-mobile {
+        display: block;
+        padding: 10px 20px;
+        background-color: #eee;
+        border: 1px solid #ddd;
+        overflow: hidden;
+        font-weight: 700
+    }
+
+    .menu-mobile i {
+        float: right;
+        font-size: 18px
+    }
+
+    .nav-adm {
+        position: relative;
+        padding: 0
+    }
+
+    .nav-adm ul {
+        display: none;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+        z-index: 99
+    }
+}
+
+@media all and (min-width:320px) and (max-width:768px) {
+    body {
+        padding-top: 67px
+    }
+
+    .padding-main {
+        padding: 40px 0
+    }
+
+    .title-main {
+        margin-bottom: 15px
+    }
+
+    .img-tes {
+        float: none;
+        margin: auto
+    }
+
+    .txt-tes {
+        width: 100%;
+        padding: 0;
+        padding-top: 15px
+    }
+
+    .footer .col-sm-4 {
+        padding: 0;
+        border-top: 1px solid rgba(255, 255, 255, .2);
+        padding-top: 15px;
+        margin-top: 15px
+    }
+
+    .footer .col-sm-4:nth-child(2) {
+        padding: 0;
+        padding-top: 15px
+    }
+
+    .footer .col-sm-4:nth-child(1) {
+        padding-top: 70px;
+        border: 0
+    }
+
+    .footer .row {
+        margin: 0
+    }
+
+    .left-footer {
+        border: 0
+    }
+
+    .txt-banner h2 {
+        font-size: 25px
+    }
+
+    .sign-main-box {
+        padding: 20px
+    }
+
+    .sign-main {
+        padding: 20px 0
+    }
+
+    .inner-content {
+        padding: 0
+    }
+
+    .find-teacher {
+        padding: 40px 0
+    }
+
+    .form-find-teacher .i-find {
+        width: 50%;
+        border-left: 0;
+        border-bottom: 1px solid #ddd
+    }
+
+    .form-find-teacher .btn {
+        margin: 0;
+        width: 100%;
+        display: block
+    }
+
+    .find-teacher h2 {
+        font-size: 25px
+    }
+
+    .txt-banner {
+        padding-top: 0
+    }
+
+    .txt-banner h2 {
+        font-size: 20px
+    }
+}
+
+@media all and (min-width:320px) and (max-width:575px) {
+    .detail-teacher .order-first {
+        order: 12
+    }
+
+    .detail-teacher .order-last {
+        order: 1;
+        margin-bottom: 15px
+    }
+
+    .slick-slide .banner-mobile {
+        display: block
+    }
+
+    .slick-slide .banner-desktop {
+        display: none
+    }
+
+    .txt-banner {
+        top: 30px;
+        transform: inherit;
+        padding-top: 0
+    }
+
+    .txt-banner .col-sm-6 {
+        flex: 0 0 100%;
+        max-width: 100%
+    }
+}
